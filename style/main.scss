@@ -1,6 +1,6 @@
 @import "variables";
 @import "mixins";
-
+@use "sass:map";
 *{
     margin:0;
 }
@@ -45,6 +45,10 @@ header{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    &:hover{
+        border-right:1px solid black;
+        border-left:1px solid black;
+    }
   
 }
 .header-block h2{
@@ -64,13 +68,10 @@ header{
 }
 
 // Основная часть
-main{
-    border:1px solid red;
-}
+
 .main__main{
     width:$mainWidth;
-    margin: 50px auto;
-    border: 1px solid green;    
+    margin: 50px auto;    
 }
 .main__main h2{
     @extend .texth1;
@@ -91,6 +92,7 @@ main{
     background-color: $color2;
     display:flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 .banner__text h3{
     color: $color1;
@@ -98,4 +100,64 @@ main{
 }
 .banner__text h4{
     @include fontpra(white,bold);
+}
+
+.banner__email{
+    background-color: white;
+    width:175px;
+    height:50px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.banner__email p{
+    color:black;
+    @include fontp;
+    font-size:15px;
+    &:hover{
+        color: orange;
+    }
+}
+
+
+.contacts{
+    width:$mainWidth;
+    margin: 50px auto;
+}
+.contacts h2{
+    text-align: center;
+    @include fontp;
+}
+.contact{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.address{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.address svg{
+    margin-top:20px;
+}
+.address h4{
+    margin-top:10px;
+    color:gray;
+}
+.address h3{
+    margin-top:10px;
+}
+
+
+footer{
+    background-color: #404149;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+footer p{
+    color:white;
 }
