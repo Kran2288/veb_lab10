@@ -1,0 +1,33 @@
+@mixin fonth1{            
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 95px;
+}
+@mixin fontp{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 27px;
+    font-weight:700;
+}
+@mixin fonth2{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 107px;
+}
+@mixin fonth3{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 53px;
+}
+
+@mixin fontpra($color, $font-weight){
+        color:$color;   
+       font-weight: $font-weight;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 36px;
+}
